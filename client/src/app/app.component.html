@@ -1,0 +1,64 @@
+<app-header class="hide-on-large-only"></app-header>
+<img src="https://s3.amazonaws.com/ryu-portfolio/static/img/cover1.png" class="home-img responsive-img">
+<md-sidenav-container [ngStyle]="{'background-color': background, 'opacity': opacity}">
+  <md-sidenav
+    class="sideNav hide-on-med-and-down"
+    mode="side"
+    opened="true">
+
+    <div class="sideNav center-align">
+      <a routerLink="/">
+      <img src="https://s3.amazonaws.com/ryu-portfolio/static/img/profile.png" class="responsive-img circle">
+      <h1>RYUSUKE LAVALLA</h1>
+      <h2>FULL-STACK DEVELOPER</h2>
+      </a>
+    </div>
+
+    <div class="sideNav-bottom center-align">
+      <md-nav-list>
+        <a routerLink="/about" routerLinkActive="active-link">
+          <md-list-item>
+            <md-icon md-list-icon>contacts</md-icon>
+            <p>ABOUT</p>
+          </md-list-item>
+        </a>
+        <a routerLink="/work">
+          <md-list-item>
+          <md-icon md-list-icon>work</md-icon>
+            <p>WORK</p>
+          </md-list-item>
+        </a>
+        <a routerLink="/skills">
+          <md-list-item>
+            <md-icon md-list-icon>build</md-icon>
+            <p>SKILLS</p>
+          </md-list-item>
+        </a>
+        <a routerLink="/contact">
+          <md-list-item>
+            <md-icon md-list-icon>chat</md-icon>
+            <p>CONTACT</p>
+          </md-list-item>
+        </a>
+      </md-nav-list>
+    </div>
+
+    <div class="nav-icons center-align">
+      <p>GET IN TOUCH</p>
+      <a href="mailto:ryusukelavalla@gmail.com">
+        <i class="fa fa-envelope fa-lg" aria-hidden="true"></i>
+      </a>
+      <a href="https://www.linkedin.com/in/ryusukelavalla" target="_blank">
+        <i class="fa fa-github-square fa-lg" aria-hidden="true"></i>
+      </a>
+      <a href="https://github.com/ryusuke15">
+        <i class="fa fa-linkedin-square fa-lg" aria-hidden="true"></i>
+      </a>
+    </div>
+  </md-sidenav>
+  <!--  -->
+
+  <!-- primary content -->
+      <router-outlet></router-outlet>
+</md-sidenav-container>
+

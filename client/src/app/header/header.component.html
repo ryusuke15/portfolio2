@@ -1,0 +1,38 @@
+<div class="top-nav">
+<md-toolbar>
+  <md-icon [mdMenuTriggerFor]="menu">menu</md-icon>
+  <a routerLink="/" class="hide-on-small-only">
+    <span class="name">RYUSUKE LAVALLA</span>
+  </a>
+  <div class="nav-right">
+    <a href="">
+      <i class="fa fa-linkedin" aria-hidden="true"></i>
+    </a>
+    <a href="">
+      <i class="fa fa-github" aria-hidden="true"></i>
+    </a>
+    <a href="">
+      <i class="fa fa-envelope" aria-hidden="true"></i>
+    </a>
+  </div>
+</md-toolbar>
+</div>
+<!--  -->
+<md-menu #menu="mdMenu">
+  <a routerLink="/about" md-menu-item>
+    <md-icon>contacts</md-icon>
+    <span>ABOUT</span>
+  </a>
+  <a routerLink="/work" md-menu-item>
+    <md-icon>work</md-icon>
+    <span>WORK</span>
+  </a>
+  <a routerLink="/skills"md-menu-item>
+    <md-icon>build</md-icon>
+    <span>SKILLS</span>
+  </a>
+  <a routerLink="/contact"md-menu-item>
+    <md-icon>chat</md-icon>
+    <span>CONTACT</span>
+  </a>
+</md-menu>

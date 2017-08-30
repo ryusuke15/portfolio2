@@ -1,0 +1,54 @@
+/* You can add global styles to this file, and also import other style files */
+@import '~https://fonts.googleapis.com/icon?family=Material+Icons';
+@import '~https://cdnjs.cloudflare.com/ajax/libs/materialize/0.99.0/css/materialize.min.css';
+@import '~@angular/material/prebuilt-themes/indigo-pink.css';
+@import '~https://fonts.googleapis.com/css?family=Bree+Serif|Montserrat';
+@import '~https://cdn.rawgit.com/konpa/devicon/df6431e323547add1b4cf45992913f15286456d3/devicon.min.css';
+@import '~https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css';
+html{
+  font-family: montserrat, sans-serrif;
+}
+
+html, body, app-root, md-sidenav-container {
+  margin: 0;
+  width: 100%;
+  height: 100%;
+}
+.page-format{
+  padding-left: 60px;
+  padding-right: 60px;
+}
+
+.title{
+  font-family: 'Bree Serif', serif;
+  display: inline-block;
+}
+
+.title-icon{
+  color: white !important;
+  background-color: blue !important;
+  margin-right: 10px !important
+}
+
+@media screen and (max-width: 1024px) {
+  .page-format{
+    padding-top: 20px;
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+
+}
+@media screen and (max-width: 768px) {
+  .page-format{
+    padding-top: 56px;
+    padding-left: 30px;
+    padding-right: 30px;
+  }
+
+}
+@media screen and (max-width: 480px) {
+    .page-format {
+      padding-left: 10px;
+      padding-right: 10px;
+    }
+}

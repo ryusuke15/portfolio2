@@ -1,0 +1,111 @@
+<div class="page-format">
+  <div class="contact">
+    <div class="row">
+<!--  -->
+      <div class="col s12">
+        <h3>GET IN TOUCH</h3>
+      </div>
+      <div class="col s12">
+        <p>Do you need a website, have a question or comment? Please feel free to send me an email or fill in this contact form. Also please checkout my LinkedIn, Github and resume.</p>
+      </div>
+      <!--Form  -->
+      <div class="contact-form col s12 m6 card">
+        <form [formGroup]="contactForm" (ngSubmit)="onSubmit()">
+          <div class="row">
+            <div class="col s12">
+              <md-input-container class="full-width">
+                <input formControlName="first_name"  mdInput type="text" placeholder="First name">
+                <md-error *ngIf="contactForm.get('first_name').hasError('required')">
+                  First name is <strong>required</strong>
+                </md-error>
+              </md-input-container>
+            </div>
+            <div class="col s12">
+              <md-input-container class="full-width">
+                <input formControlName="last_name" mdInput type="text" placeholder="Last name">
+                <md-error *ngIf="contactForm.get('last_name').hasError('required')">
+                  Last name is <strong>required</strong>
+                </md-error>
+              </md-input-container>
+            </div>
+          </div>
+          <div class="col s12">
+            <md-input-container class="full-width">
+              <input formControlName="email" mdInput type="email" placeholder="Email">
+              <md-error *ngIf="contactForm.get('email').hasError('required')">
+                Email is <strong>required</strong>
+              </md-error>
+              <md-error *ngIf="contactForm.get('email').hasError('email') && (!contactForm.get('email').hasError('required'))">
+                Valid email is <strong>required</strong>
+              </md-error>
+            </md-input-container>
+          </div>
+          <div class="col s12">
+            <md-input-container class="full-width">
+              <textarea formControlName="message" mdInput type="text" placeholder="Message"></textarea>
+              <md-error *ngIf="contactForm.get('message').hasError('required')">
+                Message is <strong>required</strong>
+              </md-error>
+              <md-error *ngIf="contactForm.get('message').hasError('minlength')">
+                Message is <strong>too short</strong>
+              </md-error>
+              <md-error *ngIf="contactForm.get('message').hasError('maxlength')">
+                Message is <strong>too long</strong>
+              </md-error>
+            </md-input-container>
+          </div>
+          <div class="col s12">
+            <button type="submit" md-button>
+              Submit
+              <i class="fa fa-paper-plane-o fa-2x"></i>
+            </button>
+          </div>
+        </form>
+      </div>
+<!--        -->
+      <div class="col s12 m6">
+        <table>
+          <tbody>
+            <tr>
+              <td style="width:17%;">E-mail:</td>
+              <td>
+                <a href="mailto:ryusukelavalla@gmail.com">
+                  <i class="fa fa-envelope"></i>
+                  ryusukelavalla@gmail.com
+                </a>
+              </td>
+            </tr>
+            <tr>
+              <td>LinkedIn:</td>
+              <td>
+                <a href="https://www.linkedin.com/in/ryusukelavalla" target="_blank">
+                  <i class="fa fa-linkedin-square"></i>
+                  ryusukelavalla
+                </a>
+              </td>
+            </tr>
+            <tr>
+              <td>Github:</td>
+              <td>
+                <a href="https://github.com/ryusuke15" target="_blank">
+                 <i class="fa fa-github-square"></i>
+                 ryusuke15
+                </a>
+              </td>
+            </tr>
+            <tr>
+              <td>Resume:</td>
+              <td>
+                <a href="https://s3.amazonaws.com/ryu-portfolio/static/img/resume.pdf" target="_blank">
+                 <i class="fa fa-file-o"></i>
+                 Download
+                </a>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+<!--  -->
+    </div>
+  </div>
+</div>

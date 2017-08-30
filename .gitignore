@@ -1,0 +1,6 @@
+*.pyc
+secret.py
+node_modules
+migrations
+*.jpg
+*.png
